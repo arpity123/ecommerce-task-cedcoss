@@ -110,11 +110,7 @@ Each product has details such as:
 
 ### 1. Open The Project Folder
 
-Make sure you are inside the project folder:
-
-```bash
-cd /Users/arpit/Desktop/cedcoss
-```
+Make sure you are inside the project folder
 
 ### 2. Open The Website
 
@@ -126,74 +122,6 @@ You can also use a simple local server if you prefer:
 ### 3. Browse Products
 
 Use the navigation bar to switch between Home, New In, Women, Men, and Sale. The products update instantly without reloading the page.
-
-### 4. View Product Details
-
-Click any product card. The product detail page opens with:
-
-- Product image
-- Thumbnail gallery
-- Category
-- Product name
-- Price and MRP
-- Sale discount badge when available
-- Description
-- Product tags
-- Size selector
-- Add to Cart button
-
-### 5. Add A Product To Cart
-
-Choose a size and click `Add to Cart`. The cart count in the header updates immediately.
-
-If the same product and size is added again, its quantity increases instead of creating a duplicate cart line.
-
-### 6. Open The Cart
-
-Click the `Bag` button in the header. The cart page shows:
-
-- Product image
-- Product name
-- Selected size
-- Product price
-- Quantity controls
-- Remove button
-- Subtotal
-- Delivery charge
-- Total amount
-- Checkout form
-
-### 7. Update Cart Items
-
-Inside the cart:
-
-- Click `+` to increase quantity.
-- Click `-` to decrease quantity.
-- Click `Remove` to delete the item.
-
-If quantity goes below 1, the item is removed automatically.
-
-### 8. Place An Order
-
-Fill in:
-
-- Full name
-- 10 digit mobile number
-- Delivery city
-
-Then click `Place Order`. The app shows a confirmation message and clears the cart.
-
-## Pricing And Delivery Logic
-
-The pricing is shown in Indian rupees using the format:
-Rs. 2,499
-
-
-Delivery works like this:
-
-- Cart is empty: `Rs. 0`
-- Subtotal is `Rs. 1,999` or more: free delivery
-- Subtotal is below `Rs. 1,999`: `Rs. 99` delivery charge
 
 ## Important Project Elements
 
