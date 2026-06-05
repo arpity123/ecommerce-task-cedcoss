@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TrendZone | Fashion Store</title>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
     <header class="site-header">
@@ -92,6 +93,62 @@
           ></p>
         </section>
       </section>
+
+      <section class="cart-page is-hidden" id="cartPage" aria-labelledby="cartTitle">
+        <div class="cart-heading">
+          <div>
+            <p class="eyebrow">Your Bag</p>
+            <h1 id="cartTitle">Shopping Cart</h1>
+          </div>
+          <button class="back-button" id="continueShopping" type="button">
+            Continue shopping
+          </button>
+        </div>
+
+        <div class="cart-layout">
+          <div class="cart-items" id="cartItems"></div>
+
+          <aside class="cart-summary" aria-label="Order summary">
+            <h2>Order Summary</h2>
+            <div class="summary-line">
+              <span>Subtotal</span>
+              <strong id="subtotalAmount">Rs. 0</strong>
+            </div>
+            <div class="summary-line">
+              <span>Delivery</span>
+              <strong id="deliveryAmount">Rs. 0</strong>
+            </div>
+            <div class="summary-line total">
+              <span>Total</span>
+              <strong id="totalAmount">Rs. 0</strong>
+            </div>
+
+            <form class="checkout-form" id="checkoutForm">
+              <label>
+                Full name
+                <input type="text" id="customerName" required placeholder="Your name" />
+              </label>
+              <label>
+                Mobile number
+                <input
+                  type="tel"
+                  id="customerPhone"
+                  required
+                  pattern="[0-9]{10}"
+                  placeholder="10 digit mobile"
+                />
+              </label>
+              <label>
+                Delivery city
+                <input type="text" id="customerCity" required placeholder="e.g. Delhi" />
+              </label>
+              <button class="add-to-cart" type="submit">Place Order</button>
+            </form>
+            <p id="orderMessage" class="cart-message" role="status" aria-live="polite"></p>
+          </aside>
+        </div>
+      </section>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>
