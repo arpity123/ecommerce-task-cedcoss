@@ -6,20 +6,92 @@
     <title>Document</title>
 </head>
 <body>
-    <header>
-        <a>TrendZone</a>
-        <nav>
-            <a>Home</a>
-            <a>New In</a>
-            <a>Men</a>
-            <a>Women</a>
-            <a>Sale</a>
-        </nav>
-        <button>
-            <span>Cart</span>
-            <span>0</span>
-        </button>
+    <header class="site-header">
+      <a class="brand" href="#" id="homeLink" aria-label="TrendZone home">TrendZone</a>
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a href="#" class="nav-link is-active" data-view="home">Home</a>
+        <a href="#" class="nav-link" data-view="new">New In</a>
+        <a href="#" class="nav-link" data-view="women">Women</a>
+        <a href="#" class="nav-link" data-view="men">Men</a>
+        <a href="#" class="nav-link" data-view="sale">Sale</a>
+      </nav>
+      <button class="cart-button" id="cartButton" type="button" aria-label="View cart">
+        <span class="cart-icon" aria-hidden="true">Bag</span>
+        <span id="cartCount">0</span>
+      </button>
     </header>
-    
+
+    <main>
+        <section class="storefront" id="storefront" aria-labelledby="storefrontTitle">
+        <div class="storefront-heading">
+          <div>
+            <p class="eyebrow" id="storefrontEyebrow">Fresh Picks</p>
+            <h1 id="storefrontTitle">Shop TrendZone</h1>
+          </div>
+          <p id="storefrontCopy">
+            Curated layers, soft essentials, and polished everyday pieces for a
+            cleaner wardrobe rotation across India.
+          </p>
+        </div>
+
+        <div class="product-grid" id="productGrid" aria-label="Product list"></div>
+      </section>
+
+      <section
+        class="product-page is-hidden"
+        id="productDetail"
+        aria-labelledby="productTitle">
+        <button class="back-button" id="backButton" type="button">Back to products</button>
+
+        <section class="gallery" aria-label="Product image gallery">
+          <div class="image-stage">
+            <img id="mainImage" src="" alt="" />
+          </div>
+
+          <div class="thumbnail-row" id="thumbnailRow" role="list"></div>
+        </section>
+
+        <section class="product-info">
+          <p class="eyebrow" id="productCategory"></p>
+          <h1 id="productTitle"></h1>
+          <div class="price-row" id="productPrice"></div>
+          <p class="description" id="productDescription"></p>
+
+          <div class="product-meta" id="productMeta"></div>
+
+          <fieldset class="size-picker">
+            <legend>Available Sizes</legend>
+            <div class="size-options">
+              <label>
+                <input type="radio" name="size" value="S" checked />
+                <span>S</span>
+              </label>
+              <label>
+                <input type="radio" name="size" value="M" />
+                <span>M</span>
+              </label>
+              <label>
+                <input type="radio" name="size" value="L" />
+                <span>L</span>
+              </label>
+              <label>
+                <input type="radio" name="size" value="XL" />
+                <span>XL</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <button id="addToCart" class="add-to-cart" type="button">
+            Add to Cart
+          </button>
+          <p
+            id="cartMessage"
+            class="cart-message"
+            role="status"
+            aria-live="polite"
+          ></p>
+        </section>
+      </section>
+    </main>
 </body>
 </html>
